@@ -48,11 +48,12 @@
     "gulp-bump": "^0.1.7",
     "gulp-clean": "^0.2.4",
     "gulp-git": "^0.3.6",
+    "gulp-mocha": "^0.4.1",
+    "gulp-size": "^0.2.0",
     "socket.io": "^0.9.16",
     "express": "^3.5.1",
     "mongoose": "^3.8.8",
     "jasmine-node": "^1.14.3",
-    "passport": "^0.2.0",
-    "gulp-mocha": "^0.4.1"
+    "passport": "^0.2.0"
   }
 }
