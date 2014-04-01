@@ -4,7 +4,7 @@
   "description": "Submit and rank ideas for teams",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jasmine-node spec"
   },
   "repository": {
     "type": "git",
@@ -46,6 +46,7 @@
     "gulp-util": "^2.2.14",
     "socket.io": "^0.9.16",
     "express": "^3.5.1",
-    "mongoose": "^3.8.8"
+    "mongoose": "^3.8.8",
+    "jasmine-node": "^1.14.3"
   }
 }
