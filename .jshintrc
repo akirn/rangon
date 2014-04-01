@@ -1,0 +1,25 @@
+{
+  "strict": true,
+  "trailing": true,
+  "node": true,
+  "jquery": true,
+  "forin": true,
+  "newcap": true,
+  "curly": true,
+  "eqeqeq": true,
+  "immed": true,
+  "indent": 2,
+  "undef": true,
+  "eqnull": true,
+  "quotmark": "single",
+  "boss": true,
+  "expr": true,
+  "latedef": "nofunc",
+  "evil": true,
+  "maxlen": 120,
+  "globals": {
+    "angular": true,
+    "describe": true,
+    "assert": true
+  }
+}
