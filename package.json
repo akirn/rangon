@@ -47,6 +47,7 @@
     "socket.io": "^0.9.16",
     "express": "^3.5.1",
     "mongoose": "^3.8.8",
-    "jasmine-node": "^1.14.3"
+    "jasmine-node": "^1.14.3",
+    "passport": "^0.2.0"
   }
 }
