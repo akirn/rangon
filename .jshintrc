@@ -14,6 +14,7 @@
   "quotmark": "single",
   "boss": true,
   "expr": true,
+  "noarg": true,
   "latedef": "nofunc",
   "evil": true,
   "maxlen": 120,
