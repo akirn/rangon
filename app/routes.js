@@ -15,7 +15,7 @@ module.exports = function(app) {
     });
 
   app.get('*', function(req, res) {
-      res.send(404, 'File not found.');
+      res.status(404).sendfile('/views/404.html', {root: './public'});
     });
 
 };
