@@ -10,7 +10,6 @@ var port = process.env.PORT || 5000;
 // mongoose.connect(db.url);
 
 app.configure(function() {
-    //app.use('/public', express.static(__dirname + '/public'));
     app.use(express.logger('dev'));
     app.use(express.json());
     app.use(express.urlencoded());
