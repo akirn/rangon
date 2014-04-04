@@ -13,7 +13,7 @@ var gulp = require('gulp'),
   pkg = require('./package.json');
 
 gulp.task('lint', function () {
-  return gulp.src('./public/js/*/*.js')
+  return gulp.src('./public/js/**/*.js')
     .pipe(jshint('.jshintrc'))
     .pipe(jshint.reporter(stylish));
 });
@@ -29,7 +29,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('build', ['test', 'clean'], function () {
-  return gulp.src('./public/js/*/*.js')
+  return gulp.src('./public/js/**/*.js')
     .pipe(gulp.dest('./public/js'))
     .pipe(rename(pkg.name + '.min.js'))
     .pipe(uglify())
