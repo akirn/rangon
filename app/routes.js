@@ -2,10 +2,6 @@
 
 module.exports = function(app) {
 
-  var errorout = function(res) {
-    res.status(404).sendfile('/views/404.html', opts);
-  };
-
   var opts = {root: './public'};
 
   app.get('/', function(req, res) {
