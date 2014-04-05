@@ -49,7 +49,7 @@
     "gulp-clean": "^0.2.4",
     "gulp-git": "^0.3.6",
     "gulp-mocha": "^0.4.1",
-    "gulp-size": "^0.2.0",
+    "gulp-size": "^0.3.0",
     "socket.io": "^0.9.16",
     "express": "^3.5.1",
     "mongoose": "^3.8.8",
