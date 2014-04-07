@@ -8,11 +8,14 @@ module.exports = function(app) {
       res.sendfile('/views/index.html', opts);
     });
 
-  app.get('/:dir/:file', function(req, res, next) {
-      var path = '/' + req.params.dir + '/' + req.params.file;
+  app.get(/^(\/[\w.-]+\/)([\w.-]+\/)?([\w.-]+)$/, function(req, res, next) {
+
+      //var path = '/' + req.params.dir + '/' + req.params.file;
+      var path = req.params.join('');
+      console.log(path);
 
       res.sendfile(path, opts, function(err) {
-        if (err.code === 'ENOENT') {
+        if (err && err.code === 'ENOENT') {
           return next();
         }
         res.send(500);
