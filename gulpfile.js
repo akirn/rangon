@@ -23,6 +23,53 @@ gulp.task('mocha', function () {
     .pipe(mocha({ reporter: 'list' }));
 });
 
+gulp.task('build_angular_js', [], function () {
+  return gulp.src('./public/vendor/angular/angular.min.js')
+    .pipe(size())
+    .pipe(gulp.dest('./public/js/vendor'));
+});
+
+gulp.task('build_angular_map', [], function () {
+  return gulp.src('./public/vendor/angular/angular.min.js.map')
+    .pipe(size())
+    .pipe(gulp.dest('./public/js/vendor'));
+});
+
+gulp.task('build_angular-route_js', [], function () {
+  return gulp.src('./public/vendor/angular-route/angular-route.min.js')
+    .pipe(size())
+    .pipe(gulp.dest('./public/js/vendor'));
+});
+
+gulp.task('build_angular-route_map', [], function () {
+  return gulp.src('./public/vendor/angular-route/angular-route.min.js.map')
+    .pipe(size())
+    .pipe(gulp.dest('./public/js/vendor'));
+});
+
+gulp.task('build_bootstrap_css', [], function () {
+  return gulp.src('./public/vendor/bootstrap/dist/css/bootstrap.min.css')
+    .pipe(size())
+    .pipe(gulp.dest('./public/css/vendor'));
+});
+
+gulp.task('build_font-awesome_css', [], function () {
+  return gulp.src('./public/vendor/font-awesome/css/font-awesome.min.css')
+    .pipe(size())
+    .pipe(gulp.dest('./public/css/vendor'));
+});
+
+gulp.task('build_vendor',
+  [
+    'build_angular_js',
+    'build_angular_map',
+    'build_angular-route_js',
+    'build_angular-route_map',
+    'build_bootstrap_css',
+    'build_font-awesome_css'
+  ]
+);
+
 gulp.task('clean', function () {
   return gulp.src('./public/js/*.js', { read: false })
     .pipe(clean());
