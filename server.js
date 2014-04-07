@@ -4,9 +4,10 @@ var express = require('express');
 var app = express();
 //var mongoose = require('mongoose');
 
+var env = require('./config/env')();
 var db = require('./config/db');
 
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || env.port;
 // mongoose.connect(db.url);
 
 app.configure(function() {
